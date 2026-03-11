@@ -1,0 +1,772 @@
+/* =========================
+   RESET / GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a {
+  color: white;
+}
+
+.about_me_content p {
+  margin-bottom: 24px;
+}
+
+/* =========================
+   THEME SYSTEM
+========================= */
+
+body.dark-grid {
+  background-color: #0f0f0f;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: white;
+}
+
+body.dark-grid .about_me_content {
+  background-color: #0f0f0f;
+  color: white;
+}
+
+body.dark-grid .hobby_item {
+  background-color: rgb(39, 39, 39);
+}
+
+body.light-grid {
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: black;
+}
+
+body.light-grid .about_me_content {
+  background-color: #bdb6b6;
+  color: black;
+}
+
+body.light-grid .hobby_item {
+  background-color: #bdb6b6;
+  border: 1px solid black;
+}
+
+body.light-grid .contact_ctn {
+  background-color: #bdb6b6;
+  border: 1px solid black;
+}
+
+body.light-grid .footer_section {
+  background-color: #bdb6b6;
+  border-top: 1px solid black;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 8vh;
+}
+
+nav {
+  width: 100%;
+  height: 8vh;
+  background-color: #541212;
+}
+
+.landing_screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.screen {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 50px;
+}
+
+.about_me_screen {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_screen {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+  padding: 0 100px;
+  list-style-type: none;
+}
+
+.navigation li {
+  font-size: 16px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+}
+
+.burger_links {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 8vh;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  list-style: none;
+  padding: 25px;
+  background-color: #3b0e0e;
+}
+
+/* =========================
+   HERO / LANDING
+========================= */
+
+.profile_picture {
+  width: 700px;
+  height: 600px;
+  object-fit: contain;
+  z-index: 100;
+  padding: 0;
+}
+
+.picture_frame {
+  position: relative;
+  align-self: flex-end;
+}
+
+.three_column_hero {
+  display: flex;
+  gap: 10px;
+}
+
+.profile_text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_text h1 {
+  font-size: 70px;
+}
+
+.profile_text_left p {
+  font-size: 16px;
+}
+
+.profile_text_right p {
+  font-size: 20px;
+}
+
+.profile_text_bubble {
+  text-align: center;
+  background-color: #ff8225;
+  border-radius: 20px;
+  padding: 20px;
+  height: fit-content;
+  margin-top: 50px;
+}
+
+.text_secondary {
+  border-bottom: 5px solid rgb(136, 27, 27);
+  padding-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.highlight_word {
+  font-weight: bolder;
+  font-size: 30px;
+  color: rgb(136, 27, 27);
+}
+
+.alejandro_text {
+  font-size: 90px;
+  color: rgb(136, 27, 27);
+}
+
+.quotation_marks {
+  font-size: 20px;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  background-color: #541212;
+  height: 65%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 300px 300px 0 0;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.social_icons_row {
+  display: flex;
+  align-self: flex-end;
+  gap: 2rem;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about_me {
+  width: 100%;
+  height: 100%;
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_me h1 {
+  font-size: 60px;
+}
+
+.about_me_content {
+  padding: 20px;
+  border: 5px solid #541212;
+}
+
+.about_me_column {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.about_me_title {
+  border-bottom: 3px solid #541212;
+  padding-bottom: 30px;
+  width: 75%;
+}
+
+.graduation_picture {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+  border: 3px solid white;
+}
+
+.sub_text_hero {
+  display: flex;
+  gap: 100px;
+  margin-top: 100px;
+  width: 70%;
+}
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies_screen {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15vh;
+}
+
+.hobbies_title {
+  width: 100%;
+  border-bottom: 5px solid #541212;
+  padding-bottom: 20px;
+}
+
+.hobbies_grid {
+  margin-top: 25px;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding-bottom: 25px;
+}
+
+.hobbies_grid li {
+  list-style-type: none;
+}
+
+.hobby_item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 5px;
+  border: 1px solid white;
+}
+
+.hobby_img {
+  width: 100px;
+  object-fit: contain;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+  padding: 100px 25%;
+}
+
+.skills_list {
+  display: flex;
+  gap: 35px;
+  list-style-type: none;
+}
+
+.skills_list li {
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  width: 100%;
+  height: 8vh;
+  border-top: 1px solid grey;
+}
+
+.contact_ctn {
+  display: flex;
+  gap: 50px;
+  width: 65%;
+  height: 85%;
+  background-color: rgb(39, 39, 39);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(110, 9, 9);
+}
+
+.contact_me_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact_form_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_heading {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.send_btn {
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: rgb(132, 208, 233);
+}
+
+/* =========================
+   UTILITIES / COMPONENTS
+========================= */
+
+.mode {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.social_icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 50px;
+  align-items: center;
+  border-top: 1px solid #541212;
+  background-color: #0f0f0f;
+}
+
+.social_footer {
+  display: flex;
+  gap: 15px;
+}
+
+.social_icons_footer {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* 1024px */
+
+@media only screen and (max-width: 1024px) {
+  .profile_picture {
+    width: 450px;
+    height: 450px;
+    align-self: center;
+  }
+
+  .picture_frame {
+    align-self: center;
+  }
+
+  .alejandro_text {
+    font-size: 40px;
+  }
+
+  .profile_text h1 {
+    font-size: 30px;
+  }
+
+  .about_me {
+    padding: 0 50px;
+  }
+
+  .social_icons {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about_me_content {
+    margin-top: 50px;
+  }
+
+  .hobbies_screen {
+    padding: 0 50px;
+  }
+
+  .hobbies_content {
+    margin-top: 100px;
+  }
+
+  .contact_ctn {
+    width: 80%;
+  }
+}
+
+/* 768px */
+
+@media only screen and (max-width: 768px) {
+  .contact_me_img {
+    display: none;
+  }
+
+  .hobbies_screen {
+    padding: 0 25px;
+  }
+
+  .hobbies_content {
+    padding: 0 25px;
+  }
+
+  .navigation {
+    padding: 0 50px;
+  }
+
+  .picture_frame {
+    align-self: center;
+  }
+
+  .profile_picture {
+    width: 350px;
+    height: 350px;
+  }
+
+  .alejandro_text {
+    font-size: 60px;
+  }
+
+  .social_icons {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social_icons_row {
+    gap: 5px;
+  }
+
+  .about_me {
+    padding: 0 50px;
+  }
+
+  .about_me_content {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
+  .about_me_title h1 {
+    font-size: 7px;
+  }
+
+  .contact_ctn {
+    gap: 0;
+  }
+}
+
+/* 600px */
+
+@media only screen and (max-width: 600px) {
+  .burger {
+    display: flex;
+  }
+
+  .burger_links.active {
+    display: flex;
+  }
+
+  .navigation li {
+    display: none;
+  }
+
+  .landing_screen {
+    flex-direction: column;
+    padding: 0 25px;
+    padding-top: 100px;
+  }
+
+  .picture_frame {
+    align-self: center;
+  }
+
+  .profile_picture {
+    width: 350px;
+    height: 350px;
+  }
+
+  .alejandro_text {
+    font-size: 40px;
+  }
+
+  .profile_text h1 {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 10px;
+    font-weight: lighter;
+    margin: 0;
+  }
+
+  .highlight_word {
+    font-size: 10px;
+  }
+
+  .social_icons {
+    width: 15px;
+    height: 15px;
+  }
+
+  .social_icons_row {
+    padding: 0;
+    gap: 5px;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+    padding: 0 10px;
+    list-style-type: none;
+  }
+
+  .navigation li {
+    font-size: 12px;
+  }
+
+  .about_me {
+    padding: 0;
+  }
+
+  .about_me_content {
+    font-size: 10px;
+    padding-top: 100px;
+  }
+
+  .about_me_column {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .graduation_picture {
+    width: 150px;
+    height: 150px;
+    position: static;
+  }
+
+  .hobbies_grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 25px;
+    gap: 10px;
+  }
+
+  .hobbies_screen {
+    padding: 0;
+  }
+
+  .hobby_item {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .contact_ctn {
+    padding: 0;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .contact_me_img {
+    display: none;
+  }
+
+  .hobbies_content {
+    padding: 0 10px;
+  }
+
+  .hobbies_title {
+    text-align: center;
+  }
+
+  .about_me h1 {
+    font-size: 20px;
+  }
+
+  .about_me_title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .about_me_content {
+    border: 0;
+    margin: 0 15px;
+    margin-top: 70px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 3px solid #3b0e0e;
+  }
+
+  .about_me_content p {
+    font-size: 12px;
+  }
+
+  .footer_section {
+    padding: 5px 20px;
+  }
+
+  .footer_section h3 {
+    font-size: 13px;
+  }
+
+  .social_icons_footer {
+    width: 25px;
+    height: 25px;
+  }
+}

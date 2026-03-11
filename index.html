@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "GJVG-J5zBdHG8Q3gj",
+        });
+      })();
+    </script>
+    <script src="theme.js" defer></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>My Webpage</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navigation">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about_me">About Me</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><img src="light-mode-svgrepo-com.svg" alt="mode" class="mode" /></li>
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </ul>
+        <div class="burger_links" id="burger_links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about_me">About Me</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><img src="light-mode-svgrepo-com.svg" alt="mode" class="mode" /></li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="landing_screen" id="home">
+        <div class="profile_text">
+          <div class="text_secondary">
+            <h1 class="i_am">I'm <span class="alejandro_text">ALEJANDRO</span>,</h1>
+            <h3>an aspiring fullstack developer.</h3>
+          </div>
+          <br />
+          <p class="description">
+            I merge <span class="highlight_word">programming</span> with a deep understanding of
+            <span class="highlight_word">social dynamics</span> to create digital spaces that work for the
+            people.
+          </p>
+          <div class="social_icons_row">
+            <a href="https://www.facebook.com/AnjoGelly/" target="_blank">
+              <img
+                src="https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo"
+                alt="facebook"
+                class="social_icons"
+              />
+            </a>
+            <a href="https://www.instagram.com/anjogellada/" target="_blank">
+              <img
+                src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM"
+                alt="instagram"
+                class="social_icons"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="picture_frame">
+          <img src="profilepicture.png" alt="Alejandro Gellada profile picture" class="profile_picture" />
+          <div class="circle"></div>
+        </div>
+      </section>
+      <section class="about_me_screen" id="about_me">
+        <div class="about_me">
+          <div class="about_me_content">
+            <div class="about_me_column">
+              <h1 class="about_me_title">About Me</h1>
+              <img src="profile_picture.jpg" alt="graduation_picture" class="graduation_picture" />
+            </div>
+            <p>Hi, I’m Alejandro — but I go by the name Anjo.</p>
+            <p>
+              I graduated with a Bachelor's Degree in Social Sciences at University of the Philippines Baguio
+              in 2023 and currently taking a post-graduate degree in Computer Science at UPOU.
+            </p>
+
+            <p>
+              I've always been passionate and curious about tech, and what drew me to development is the
+              perfect mix of creativity, logic, and problem-solving — and I’ve been hooked ever since.
+            </p>
+
+            <p>
+              I believe in life-long learning and I am always looking for ways to grow, whether it's by
+              exploring new tech, building better user experiences, or developing apps that help solve real
+              world problems. I get a real kick out of seeing something go from a blank screen to a living,
+              breathing website.
+            </p>
+
+            <p>
+              My goal is to become a well-rounded full-stack developer who builds meaningful digital tools and
+              experiences that create real impact. Eventually, I’d love to work on projects that empower
+              creatives, small businesses, or underserved communities.
+            </p>
+
+            <p>
+              When I’m not writing code, I’m probably reading, staying active, playing video games, or
+              strumming a few chords on my guitar!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="hobbies_screen" id="hobbies">
+        <div class="hobbies_content">
+          <div class="hobbies_title">
+            <h1>Hobbies and Interests</h1>
+          </div>
+          <!-- <div class="hobbies_grid">
+
+        </div> -->
+          <ol class="hobbies_grid">
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/17463/17463513.png"
+                alt="running"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Running</strong>
+                <p>
+                  I enjoy running as a way to stay physically active and clear my mind. It helps improve my
+                  endurance while also reducing stress.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8750/8750683.png"
+                alt="reading"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Reading</strong>
+                <p>
+                  Reading allows me to learn new ideas, explore different perspectives, and relax. I
+                  especially enjoy books that promote personal growth and reflection, but I also enjoy fiction
+                  books when I want to escape into a different world.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4247/4247930.png"
+                alt="watching"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Watching</strong>
+                <p>
+                  I like watching movies, series, or documentaries as a form of entertainment and inspiration.
+                  It helps me unwind while discovering new stories and cultures.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2906/2906496.png"
+                alt="meditating"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Meditating</strong>
+                <p>
+                  Meditation helps me improve focus, manage stress, and sectiontain mental clarity. It allows
+                  me to slow down and be more present in daily life.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/10632/10632436.png"
+                alt="cooking"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Cooking</strong>
+                <p>
+                  I enjoy cooking and experimenting with different recipes. It allows me to be creative while
+                  preparing meals that I can share with others.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8635/8635996.png"
+                alt="photography"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Photography</strong>
+                <p>
+                  Photography helps me capture meaningful moments and appreciate details in everyday life. I
+                  enjoy taking photos of places, people, and experiences.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://www.clipartmax.com/png/middle/466-4663266_podcast-icon-png-free.png"
+                alt="podcast"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Podcast Listening</strong>
+                <p>
+                  Listening to podcasts allows me to learn new ideas and perspectives while relaxing or doing
+                  other activities. I enjoy topics related to self-improvement, technology, and storytelling.
+                </p>
+              </div>
+            </li>
+
+            <li class="hobby_item">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/8332/8332396.png"
+                alt="guitar"
+                class="hobby_img"
+              />
+              <div class="hobby_description">
+                <strong>Guitar</strong>
+                <p>
+                  Playing the guitar is my creative escape. It helps me unwind, improves my focus, and
+                  provides a sense of achievement as I master new pieces.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="contact_screen" id="contact">
+        <div class="contact_ctn">
+          <div class="contact_form_div">
+            <div class="contact_heading">
+              <h1>Contact Me</h1>
+              <p>
+                If you would like to get in touch, feel free to reach out via email at
+                alejandrogellada@gmail.com
+              </p>
+            </div>
+            <form class="contact_form" onsubmit="sendMail(event)">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="message">Message</label>
+              <textarea rows="6" name="message" id="message" required></textarea>
+              <button type="submit" class="send_btn">Send Message</button>
+            </form>
+          </div>
+          <div>
+            <img
+              src="https://media.istockphoto.com/id/1217915834/vector/online-party-social-distancing-concept-a-diverse-group-of-young-people-gathering-together.jpg?s=612x612&w=0&k=20&c=tgDZ_582LpKCxeoQDCb7qgTJM7pxp4Dzf7lMf8hY5VE="
+              alt="contact image"
+              class="contact_me_img"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer_section">
+      <h3>ALEJANDRO GELLADA</h3>
+      <div class="social_footer">
+        <a href="https://www.facebook.com/AnjoGelly/" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo"
+            alt="facebook"
+            class="social_icons_footer"
+          />
+        </a>
+        <a href="https://www.instagram.com/anjogellada/" target="_blank">
+          <img
+            src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM"
+            alt="instagram"
+            class="social_icons_footer"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
